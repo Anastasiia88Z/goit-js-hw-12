@@ -1,7 +1,9 @@
 <ul>
-  {{#each this}}
-    <div class="card-img">
-      <img class="flag" src="{{this.flag}}" alt="flag">
-    </div>
-  {{/each}}
+    {{#each this}}
+    <div class="country-thumb">
+       <img class="country-img" src="{{this.flag}}" alt="flag" width="200" height="100">
+       <h3>{{this.name}}</h3>
+    </div>   
+    {{/each}}
+    
 </ul>

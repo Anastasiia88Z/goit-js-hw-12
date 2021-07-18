@@ -5,7 +5,7 @@ import countriesTpl from '../src/templates/countries.hbs';
 import API from './js/fetchCountries';
 import getRefs from './js/get-refs';
 
-import Notiflix, { Notify } from 'notiflix';
+import Notiflix from "notiflix";
 
 
 const debounce = require('lodash.debounce');
@@ -39,10 +39,13 @@ function renderCountryCard(name) {
 }
 
 
-function onFetchError(message) {
-  Notiflix.Notify.failure(message);
-}
 
 function getInfoMessage(message) {
   Notiflix.Notify.info(message);
 }
+
+function onFetchError(message) {
+  Notiflix.Notify.failure(message);
+}
+
+
