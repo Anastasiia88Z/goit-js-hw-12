@@ -27,7 +27,7 @@ function onSearch(e) {
 
   console.log(input)
 
-  if (input === '') {
+  if (input.trim() === '') {
     return Notiflix.Notify.failure('Please enter something');
   } else {
 
@@ -39,6 +39,7 @@ function onSearch(e) {
 
 
 function renderCountryCard(countries) {
+
   if (countries.length === 1) {
     const markup = countries[0];
     refs.countryInfo.insertAdjacentHTML('beforeend', countryCardTpl(markup));
@@ -55,8 +56,6 @@ function renderCountryCard(countries) {
   }
 
 }
-
-
 
 
 
